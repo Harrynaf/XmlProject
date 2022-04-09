@@ -21,7 +21,7 @@ public class ValidateXSD {
             Validator validator = schema.newValidator();
             validator.validate(new StreamSource(xmlFile));
         } catch (IOException | IllegalArgumentException | SAXException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
             return false;
         }
         return true;
