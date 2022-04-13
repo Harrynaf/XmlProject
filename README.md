@@ -1,2 +1,2 @@
 # XmlProject
-Just run main.
+Run main.
