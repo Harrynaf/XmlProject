@@ -1,21 +1,21 @@
 package com.xmlproject.repo;
 
-import com.xmlproject.model.Document;
+import com.xmlproject.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RepoImpl implements Repository {
 
-    List<Document> documentList = new ArrayList<>();
+    List<Book> documentList = new ArrayList<>();
 
     @Override
-    public void add(Document document) {
+    public void add(Book document) {
         documentList.add(document);
     }
 
     @Override
-    public List<Document> getAll() {
+    public List<Book> getAll() {
         return documentList;
     }
 }

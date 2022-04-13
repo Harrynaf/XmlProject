@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<book xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com/xml lorem.xsd">
+<?xml-stylesheet href="lorem.xslt" type="text/xsl"?>
+<ns2:book xmlns:ns2="https://www.w3schools.com">
     <statistics>
-        <dateTimeOfCreation>2022-04-13T14:56:06.634187</dateTimeOfCreation>
+        <dateTimeOfCreation>2022-04-13T14:06:11.821799</dateTimeOfCreation>
         <author>Tolkien</author>
         <applicationClassName>WriteXml</applicationClassName>
         <chapters>6</chapters>
@@ -48733,4 +48734,4 @@
             <line> Bibendum est ultricies integer quis</line>
         </paragraph>
     </chapter>
-</book>
+</ns2:book>

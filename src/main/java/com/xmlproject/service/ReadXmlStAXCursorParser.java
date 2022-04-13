@@ -8,6 +8,7 @@ import javax.xml.stream.events.XMLEvent;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
@@ -54,7 +55,7 @@ public class ReadXmlStAXCursorParser {
         return linecount;
     }
 
-    public HashSet<String> getWords(String path)
+    public List<String> getWords(String path)
             throws FileNotFoundException, XMLStreamException {
 
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
@@ -75,7 +76,7 @@ public class ReadXmlStAXCursorParser {
                 if ("line".equals(reader.getName().getLocalPart())) {
                     eventType = reader.next();
                     if (eventType == XMLEvent.CHARACTERS) {
-                        String[] wordsInLine = reader.getText().split("\\s+");
+                        String[] wordsInLine = reader.getText().split("[\\W\\.\\,]");
                         words.addAll(List.of(wordsInLine));
                     }
                 }
@@ -83,7 +84,8 @@ public class ReadXmlStAXCursorParser {
             }
 
         }
-        return words;
+
+        return new ArrayList<>(words);
     }
 
 }

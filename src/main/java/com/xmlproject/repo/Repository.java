@@ -1,10 +1,10 @@
 package com.xmlproject.repo;
 
-import com.xmlproject.model.Document;
+import com.xmlproject.model.Book;
 
 import java.util.List;
 
 public interface Repository {
-    void add(Document document);
-    List<Document> getAll();
+    void add(Book document);
+    List<Book> getAll();
 }
