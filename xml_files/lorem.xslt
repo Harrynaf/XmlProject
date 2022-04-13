@@ -43,6 +43,20 @@
                         </tr>
                     </xsl:for-each>
                 </table>
+                <table border="2">
+                    <tr>
+                        <th>Line</th>
+                    </tr>
+                    <xsl:for-each select="chapter">
+                        <tr>
+                            <xsl:for-each select="paragraph">
+                            <td>
+                                <xsl:value-of select="line"/>
+                            </td>
+                            </xsl:for-each>
+                        </tr>
+                    </xsl:for-each>
+                </table>
             </body>
         </html>
     </xsl:template>
